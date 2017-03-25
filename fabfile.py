@@ -1,5 +1,6 @@
 from fabric.api import *
 from fabric.contrib.project import *
+from fabric.contrib.files import *
 
 env.user = 'james'
 env.hosts = ['jlo']
