@@ -1,9 +1,9 @@
 # gitlab-d'oh
 
-DO help.
+### DO help.
 
   - Manages the installation of GitLab from scratch on a single (or multiple) DO instances (maybe other hosting providers too), with a single command
-  - Syncs local GDK or GitLab instance or remote branch to DO, and automatically restarts
+  - Syncs local GDK/GitLab instance or remote branch to DO, and automatically restarts and runs migrations on the instance.
   - Some other magic
   - Does everything from the local machine
 
@@ -35,7 +35,7 @@ $ fab install 9.0.0
 
 ## List of commands:
 
-| Command | README |
+| Command | Description |
 | ------ | ------ |
 | fab setup | GitLab repo setup |
 | fab install:version,edition,package | Installs specified GitLab version X.X.X. Defaults to X.X.X,ce,0|
