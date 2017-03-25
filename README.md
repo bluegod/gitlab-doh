@@ -35,7 +35,7 @@ $ fab install 9.0.0
 
 ## List of commands:
 
-| Command | README |
+| Command | Description |
 | ------ | ------ |
 | fab setup | GitLab repo setup |
 | fab install:version,edition,package | Installs specified GitLab version X.X.X. Defaults to X.X.X,ce,0|
