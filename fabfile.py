@@ -11,13 +11,21 @@ local_gitlab['ee'] = '~/Development/gitlab-development-kit-ee/gitlab'
 local_tmp_gitlab = '/tmp/gitlab-doh'
 remote_gitlab = '/opt/gitlab/embedded/service/gitlab-rails'
 
+swap_size = '2GB'
+
 sync_dirs = ['app', 'lib', 'db']
 
 @task
 def setup():
+    _add_swap()
     sudo('apt-get install -y curl openssh-server ca-certificates postfix')
     with cd('/tmp'):
         run("curl -s https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash")
+
+def _add_swap():
+    sudo("sudo fallocate -l %s /swapfile" % swap_size)
+    sudo('sudo chmod 600 /swapfile')
+    sudo('sudo mkswap /swapfile && sudo swapon /swapfile')
     
 @task
 def install(version, edition='ce', package='0'):
