@@ -1,4 +1,4 @@
-### DO Help.
+# DO Help.
 
   - Manages the installation of GitLab from scratch on a single (or multiple) DO instances (maybe other hosting providers too), with a single command
   - Syncs local GDK/GitLab instance or remote branch to DO, and automatically restarts and runs migrations on the instance.
@@ -9,6 +9,7 @@
 ### Remote
  - rsync (should be there by default)
  - user with sudo (better without password) SSH access
+
 ### Local
  - rsync (should be there by default)
  - fabric (brew install fabric)
