@@ -1,5 +1,3 @@
-# gitlab-d'oh
-
 ### DO help.
 
   - Manages the installation of GitLab from scratch on a single (or multiple) DO instances (maybe other hosting providers too), with a single command
@@ -10,7 +8,7 @@
 ## Requirements
 ### Remote
  - rsync (should be there by default)
- - user with sudo (better with no password) SSH access
+ - user with sudo (better without password) SSH access
 ### Local
  - rsync (should be there by default)
  - fabric (brew install fabric)
@@ -26,7 +24,7 @@ Alternatively, you can use it by passing `-H login@host`.
 
 ## Example
 
-Runs the initial setup on instance and install GitLab CE version 9.0.0:
+Runs the initial setup on a DO instance and installs GitLab CE version 9.0.0:
 
 ```sh
 $ fab setup
@@ -37,7 +35,7 @@ $ fab install 9.0.0
 
 | Command | Description |
 | ------ | ------ |
-| fab setup | GitLab repo setup |
+| fab setup | GitLab repo setup (install required dependencies) |
 | fab install:version,edition,package | Installs specified GitLab version X.X.X. Defaults to X.X.X,ce,0|
 | uninstall | Uninstall GitLab |
 | sync:extra_dirs,edition | Syncs default dirs (app,lib,db) + extra_dirs (if specified) from local instance to remote and restarts and runs migrations on GitLab |
