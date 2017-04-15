@@ -1,4 +1,4 @@
-### DO help.
+### DO Help.
 
   - Manages the installation of GitLab from scratch on a single (or multiple) DO instances (maybe other hosting providers too), with a single command
   - Syncs local GDK/GitLab instance or remote branch to DO, and automatically restarts and runs migrations on the instance.
@@ -22,13 +22,19 @@ Change `fabfile.py` header configuration to suit your needs. Particularly:
 
 Alternatively, you can use it by passing `-H login@host`.
 
-## Example
+## Examples
 
 Runs the initial setup on a DO instance and installs GitLab CE version 9.0.0:
 
 ```sh
 $ fab setup
 $ fab install 9.0.0
+```
+
+Syncs local GitLab CE code with remote DO instance, runs migrations and restarts Unicorn workers
+
+```sh
+$ fab sync
 ```
 
 ## List of commands:
